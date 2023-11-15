@@ -11,9 +11,9 @@ LIB_NAME := Name
 LIB_SHARE := $(LIB_DIR)/share
 
 mk_objs:
-	$(CC) -c $(CUR_DIR)/main.c -o $(OBJ_DIR)/main.o $(INC_FLAG)
-	$(CC) -c $(SRC_DIR)/hello1.c -o $(OBJ_DIR)/hello1.o $(INC_FLAG)
-	$(CC) -c $(SRC_DIR)/hello2.c -o $(OBJ_DIR)/hello2.o $(INC_FLAG)
+	$(CC) -c -fPIC $(CUR_DIR)/main.c -o $(OBJ_DIR)/main.o $(INC_FLAG)
+	$(CC) -c -fPIC $(SRC_DIR)/hello1.c -o $(OBJ_DIR)/hello1.o $(INC_FLAG)
+	$(CC) -c -fPIC $(SRC_DIR)/hello2.c -o $(OBJ_DIR)/hello2.o $(INC_FLAG)
 mk_shared:
 	$(CC) -shared $(OBJ_DIR)/hello1.o $(OBJ_DIR)/hello2.o -o $(LIB_SHARE)/lib$(LIB_NAME).so
 
