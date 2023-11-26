@@ -8,11 +8,10 @@
 
 int main()
 {
-
    int fd;
    struct stat infor;
-   char str1[12]="Tuan TNT19 ";
-   char str2[14]="Rat dep trai\n";
+   char str1[12] = "Tuan TNT19 ";
+   char str2[14] = "Rat dep trai\n";
    fd = open("test.txt",O_RDWR | O_CREAT,0666);
    if (fd ==-1)
     {
