@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+
 int main() {
     
     int fd = open("test.txt", O_WRONLY | O_APPEND, 0644);
@@ -10,12 +11,13 @@ int main() {
         printf("Can not open file \n");
     }
 
-    // Write some data to the end of the file
+// Write some data to the end of the file
     char data1[15]="Tuan deptrai 1\n";
-     lseek(fd,0,SEEK_SET);
+    lseek(fd,0,SEEK_SET);
     if (write(fd, data1, strlen(data1)) == -1) {
         printf("Can not write 1\n");
     }
+    
 // Close the file
     close(fd);
 
