@@ -12,7 +12,7 @@ int main() {
     }
 
 // Write some data to the end of the file
-    char data1[15]="Tuan deptrai 1\n";
+    char data1[15] = "Tuan deptrai 1\n";
     lseek(fd,0,SEEK_SET);
     if (write(fd, data1, strlen(data1)) == -1) {
         printf("Can not write 1\n");
