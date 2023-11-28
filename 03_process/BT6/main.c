@@ -19,7 +19,6 @@ int main()
         printf("End child process\n");
         
     }
-
         else
     {
         printf("I am the parent process \n");

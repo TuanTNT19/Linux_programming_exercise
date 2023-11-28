@@ -6,8 +6,7 @@
 void func(int signum)
 {
     printf("Im in func()\n");
-    wait(NULL);
-    
+    wait(NULL);    
 }
 
 int main()
@@ -22,11 +21,9 @@ int main()
         printf("I am the child process \n");
         printf("My PID is : %d , my parent PID is : %d \n",getpid(),getppid());
         sleep(3);
-        printf("End child process\n");
-        
+        printf("End child process\n");    
     }
     else{
-        
         printf("I am the parent process \n");
         printf("My PID id %d \n",getpid());
         signal(SIGCHLD, func);
