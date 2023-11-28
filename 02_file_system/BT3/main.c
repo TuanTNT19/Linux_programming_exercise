@@ -8,7 +8,6 @@
 
 int main()
 {
-
    int fd;
    struct stat infor;
    char str1[12] = "Tuan TNT19 ";

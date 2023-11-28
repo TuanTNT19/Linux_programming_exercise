@@ -29,4 +29,9 @@ int main() {
 + Trong VD trên, ta tạo trước file test.txt với dữ liệu mặc định là TEST APPEND
 - Nếu không dùng O_APPEND thì khi lseek() lên đầu file , dữ liệu mới sẽ ghi đè lên dữ liệu cũ -> File txt sau cùng chỉ có dữ liệu mới
 - Nếu dùng O_APPEND thì dù cho có lseek() thì dữ liệu mới vẫn mặc định ghi ở cuối file -> File txt sau cùng có đầy đủ cả dữ liệu mới và cũ
+<<<<<<< HEAD
 */
+=======
+
+*/
+>>>>>>> 856decfdcb4124c43aedd2576b67120739efbbf7
