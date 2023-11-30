@@ -10,20 +10,22 @@ int main()
     if (child_pid >= 0)
     {
         if (child_pid == 0)
-    {
+        {
         printf("I am the child process \n");
         printf("My PID is : %d , my parent PID is : %d \n", getpid(), getppid());
         printf("End child process\n");
-    }
-    else{
+        }
+
+    else {
         printf("I am the parent process \n");
         printf("My PID id %d \n", getpid());
         printf("End of parrent process\n");
+        }
     }
-
-    }
-    else{
+    
+    else {
         printf("Fork unsuccessfully\n");
     }
+
     return 0;
 }
