@@ -123,11 +123,11 @@ int main()
     }
     
     if (pthread_create(&id2,NULL,&func2,&pe)){
-        printf("Create Thread 1 Error\n");
+        printf("Create Thread 2 Error\n");
     }
     
     if (pthread_create(&id3,NULL,&func3,&pe)){
-        printf("Create Thread 1 Error\n");
+        printf("Create Thread 3 Error\n");
     }
     
     while(1);
