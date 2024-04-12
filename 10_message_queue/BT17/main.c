@@ -31,7 +31,7 @@ int main()
     attr.mq_maxmsg = 10;
     attr.mq_msgsize = 100;
     
-    mqd_t mqid = mq_open("/mqueue", O_RDWR | O_CREAT | O_NONBLOCK , MQ_MODE, &attr);  //open queue
+    mqd_t mqid = mq_open("/mqueue", O_RDWR | O_CREAT | O_NONBLOCK , 0666, &attr);  //open queue
       if (mqid == -1) {  
         printf("mq_open() error %d: %s\n", errno, strerror(errno));  
         return -2;  
