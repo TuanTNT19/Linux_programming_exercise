@@ -4,9 +4,8 @@ build_s:
 build_c:
 	gcc -o client client.c
 run_s:
-	sudo ./server 600
+	./server 2000
 run_c:
-	./client 192.168.9.130 600
-
+	./client 192.168.9.130 2000
 clean:
 	rm -rf server client

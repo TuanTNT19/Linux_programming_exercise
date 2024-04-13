@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
-#include <sys/socket.h>      
-#include <netinet/in.h>     
+#include <sys/socket.h>
+#include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
 
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     ser_addr.sin_port = htons(atoi(argv[2]));
     ser_addr.sin_family = AF_INET;
-    inet_pton(AF_INET, argv[1], &ser_addr.sin_addr);
+    inet_pton(AF_INET, argv[1], &ser_addr.sin_addr.s_addr);
 
     connect(ser_fd, (struct sockaddr *)&ser_addr, sizeof(ser_addr));
 
